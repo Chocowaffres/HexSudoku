@@ -1,0 +1,20 @@
+* {
+    -fx-primary : #92b4f4;
+    -fx-secondary : #296eb4;
+    -fx-primarytext : #E9F0F4;
+    -fx-secondarytext : #296eb4;
+}
+
+.button{
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 20px;
+    -fx-font-size: 16pt;
+}
+
+.button:hover {
+    -fx-font-family: "Lucida Console";
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-secondarytext;
+}

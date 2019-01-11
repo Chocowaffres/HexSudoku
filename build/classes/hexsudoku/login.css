@@ -1,0 +1,48 @@
+* {
+    -fx-primary : #92b4f4;
+    -fx-secondary : #296eb4;
+    -fx-primarytext : #E9F0F4;
+    -fx-secondarytext : #296eb4;
+}
+
+.button {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-family: "Lucida Console";
+    -fx-font-size: 12pt;
+}
+
+.button:hover {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-secondarytext;
+}
+
+.choice-box {
+    -fx-background-color: -fx-primary;
+    -fx-font-family: "Lucida Console";
+    -fx-font-size: 12pt;
+}
+
+.choice-box .context-menu {
+    -fx-background-color: -fx-primary;
+    -fx-pref-width: 150;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color: -fx-secondary;
+}
+
+.choice-box .label {
+    -fx-text-fill: -fx-primarytext;
+}
+
+.choice-box .menu-item:focused .label {
+    -fx-text-fill: -fx-primarytext;
+}
+
+.label {
+    -fx-text-fill: -fx-secondarytext;
+    -fx-font-family: "Lucida Console";
+    -fx-font-weight: bold;
+    -fx-font-size: 11pt;
+}
