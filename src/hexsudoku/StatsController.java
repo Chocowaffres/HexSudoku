@@ -11,12 +11,18 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -24,6 +30,13 @@ public class StatsController implements Initializable {
     
     // ID do Utilizador
     public static int iIDUser = 0;
+    
+    @FXML
+    private TableView<Game_Stats> tableView;
+    @FXML
+    private TableColumn<Game_Stats,String> diff;
+    @FXML
+    private TableColumn<Game_Stats,String> time;
     
     // SQLite connection string
     private static final String URL = "jdbc:sqlite:sudoku.db";
@@ -71,10 +84,15 @@ public class StatsController implements Initializable {
             conn = DriverManager.getConnection(URL);
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            
+            ObservableList<Game_Stats> gameStats
+            = FXCollections.observableArrayList();
+
             while (rs.next()) {
-                
+                gameStats.add(new Game_Stats(rs.getString("dificuldade"),rs.getString("tempo")));
             }
+            diff.setCellValueFactory(new PropertyValueFactory<>("difficulty"));
+            time.setCellValueFactory(new PropertyValueFactory<>("tempo"));
+            tableView.setItems(gameStats);
         }
         catch (Exception e) {
             e.printStackTrace();

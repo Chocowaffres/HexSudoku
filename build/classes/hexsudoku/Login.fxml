@@ -71,7 +71,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="26.0" prefWidth="452.0" style="-fx-background-color: #cfdee7;">
                <children>
-                  <Text fill="#296eb4" strokeType="OUTSIDE" strokeWidth="0.0" text="Joana Costa Daniel Fernandes">
+                  <Text fill="#296eb4" strokeType="OUTSIDE" strokeWidth="0.0" text="Joana Costa     Daniel Fernandes">
                      <font>
                         <Font name="Lucida Console" size="11.0" />
                      </font></Text>

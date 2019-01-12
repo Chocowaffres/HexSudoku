@@ -3,47 +3,7 @@ package hexsudoku;
 import java.util.Collections;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Hashtable;
 
-/*
- * per box formula
- * this formula goes through each box instead of the natural order
- * ((i / 3) % 3) * 9 + ((i % 27) / 9) * 3 + (i / 27) * 27 + (i %3)
- *
- * get box origin formula
- * this formula gives the index of the origin of the box that contains index i (0-80)
- * ((i % 9) / 3) * 3 + (i / 27) * 27
- * 
- * get row origin formula
- * this formula gives the index of the origin of the row that contains index i (0-80)
- * (i / 9) * 9
- *
- * get column origin formula
- * this formula gives the index of the origin of the column that contains index i (0-80)
- * i % 9
- *
- * get box origin formula
- * this formula gives the index of origin of box // i (0-8)
- * (i * 3) % 9 + ((i * 3) / 9) * 27
- *
- * get row origin formula
- * this formula gives the index of origin of row // i (0-8)
- * i*9
- *
- * get box origin formula
- * this formula gives the index of origin of column // i (0-8)
- * i
- *
- * box step formula
- * this formula runs through a box shape (i must be less than 9)
- * boxOrigin + (i / 3) * 9 + (i % 3)
- *
- * row step formula
- * rowOrigin + i
- *
- * col step formula
- * colOrigin + i*9
- */
 public class SudokuGridGenerator {
 
     private int[] grid;
