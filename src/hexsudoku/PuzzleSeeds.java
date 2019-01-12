@@ -5,10 +5,7 @@
  */
 package hexsudoku;
 
-import java.util.ArrayList;
-
 public class PuzzleSeeds {
-    private ArrayList<int[][]> puzzles = new ArrayList();
     
     protected static int[][] example1 = { { 11, 2, 5, -1, 4, -1, 9, -1, 6, 14, -1, 1, -1, 3, -1, -1 },
         { 14, -1, 0, 9, -1, -1, 2, 12, 13, -1, 3, -1, 15, -1, -1, -1 },
