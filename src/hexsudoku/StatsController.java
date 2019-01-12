@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hexsudoku;
 
 import java.net.URL;
@@ -77,6 +73,7 @@ public class StatsController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
         String sql = "SELECT * FROM stat WHERE iduser = " + this.iIDUser;
         
         Connection conn = null;

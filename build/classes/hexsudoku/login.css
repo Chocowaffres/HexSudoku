@@ -46,3 +46,7 @@
     -fx-font-weight: bold;
     -fx-font-size: 11pt;
 }
+
+.table-column {
+    -fx-alignment: center;
+}

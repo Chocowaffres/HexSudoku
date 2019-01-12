@@ -285,7 +285,6 @@ public class SudokuGridGenerator {
         while (count < tot) {
             count += removeCell(iaGridPresent);
         }
-        System.out.println("COUNT ------------------------------------"+count);
         return iaGridPresent;
     }
 

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hexsudoku;
 
 import java.net.URL;
@@ -41,7 +37,7 @@ public class EscolhaController implements Initializable {
         int col = (Integer.parseInt(sLabel.substring(1)))-1;
         
         int pos = row*16+col;
-        FXMLDocumentController.updateCurrent(pos, Integer.parseInt(s,16));
+        FXMLDocumentController.updateCurrent(pos, Integer.parseInt(s,16)+1);
         Stage.close();
     }
 }

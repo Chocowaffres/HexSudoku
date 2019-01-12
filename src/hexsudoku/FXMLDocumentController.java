@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package hexsudoku;
 
 import java.net.URL;
@@ -291,7 +287,7 @@ public class FXMLDocumentController implements Initializable {
         timerCurrentTime += Integer.parseInt(s2[0]) * 3600000;
         timerCurrentTime += Integer.parseInt(s2[1]) * 60000;
         timerCurrentTime += Integer.parseInt(s2[2]) * 1000;
-        
+        gridAvo.setVisible(false);
         showInformation();        
     }
     
@@ -447,6 +443,7 @@ public class FXMLDocumentController implements Initializable {
         if (result.get() == ButtonType.OK) {
             currentTime = System.currentTimeMillis();
             timeline.play();
+            gridAvo.setVisible(true);
         }
         
     }
