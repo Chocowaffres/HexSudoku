@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="HexSudoku.jar" size="113316" download="eager" />
+    <jar href="HexSudoku.jar" size="94073" download="eager" />
     <jar href="lib\sqlite-jdbc-3.23.1.jar" size="6733696" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="HexSudoku" >

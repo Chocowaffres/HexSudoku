@@ -64,10 +64,12 @@ public class LoginController implements Initializable {
                     
                     sNums.show();
                     ((Node) (event.getSource())).getScene().getWindow().hide();
+                    
                 }
                 else{
                     showWarning("Username and password do not match!");
                 }
+                conn.close();
             }
             catch(Exception e){}     
         }

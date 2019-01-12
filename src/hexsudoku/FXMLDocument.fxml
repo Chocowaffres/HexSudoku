@@ -655,6 +655,11 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Label>
+                  <Label fx:id="E12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.columnIndex="3">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
                   <Label fx:id="F9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.rowIndex="1">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -670,22 +675,12 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Label>
-                  <Label fx:id="E12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.columnIndex="3">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
                   <Label fx:id="F12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Label>
                   <Label fx:id="G9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.rowIndex="2">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-                  <Label fx:id="H9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.rowIndex="3">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -701,6 +696,11 @@
                      </padding>
                   </Label>
                   <Label fx:id="G12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="H9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: lightgray;" GridPane.rowIndex="3">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -1630,25 +1630,25 @@
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#onPauseClick" prefHeight="30.0" prefWidth="100.0" text="Pause" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#onPauseClick" prefHeight="30.0" prefWidth="100.0" text="Pause" GridPane.rowIndex="3">
                <font>
                   <Font name="Lucida Console" size="12.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Hint" GridPane.rowIndex="5">
+            <Button fx:id="BHint" mnemonicParsing="false" onAction="#onHintClick" prefHeight="30.0" prefWidth="100.0" text="Hint : " GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#onSolutionClick" prefHeight="30.0" prefWidth="100.0" text="Solution" GridPane.rowIndex="6">
+            <Button mnemonicParsing="false" onAction="#onVerifyClick" prefHeight="30.0" prefWidth="100.0" text="Verify" GridPane.rowIndex="6">
                <GridPane.margin>
-                  <Insets />
+                  <Insets bottom="10.0" />
                </GridPane.margin>
             </Button>
             <Button mnemonicParsing="false" onAction="#onMenuClick" prefHeight="30.0" prefWidth="100.0" text="Menu" GridPane.rowIndex="7">
@@ -1680,6 +1680,7 @@
                   <Image url="@images/time_icon.png" />
                </image>
             </ImageView>
+            <Button mnemonicParsing="false" onAction="#onSolutionClick" prefHeight="30.0" prefWidth="100.0" text="Solution" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </right>

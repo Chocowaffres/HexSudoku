@@ -28,7 +28,7 @@ public class DBHelper {
         String sqlStats = "CREATE TABLE IF NOT EXISTS stat ("
                 + " id integer PRIMARY KEY AUTOINCREMENT,"
                 + " dificuldade varchar(50) NOT NULL,"
-                + " tempo double NOT NULL,"
+                + " tempo varchar(50) NOT NULL,"
                 + " iduser integer NOT NULL, FOREIGN KEY(iduser) REFERENCES user(id)"
                 + ");";
         

@@ -21,7 +21,8 @@ public class Login_ihc extends Application {
         stage.setTitle("HexSudoku");
         Image iIcon = new Image(getClass().getResourceAsStream("/hexsudoku/images/logo.jpg"));
         stage.getIcons().add(iIcon);
-            
+        
+        DBHelper.createTables();
         stage.show();
     }
 

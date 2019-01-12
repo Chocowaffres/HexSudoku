@@ -22,7 +22,7 @@ public class SolutionController implements Initializable {
     private GridPane gridAvo;           
     
     // Puzzle a ser mostrado
-    public static int[][] iaPuzzle;           
+    public static int[] iaPuzzle;           
     
     private Hashtable<Integer,String> htToHex = new Hashtable<>();
     
@@ -33,13 +33,16 @@ public class SolutionController implements Initializable {
         ObservableList<Node> filhos = gridAvo.getChildren();
         
         // Percorrer os gridpane filho
+        int k = 0;
         for (int i = 0; i < filhos.size(); i++) {
             GridPane grid = (GridPane) filhos.get(i);
             ObservableList<Node> netos = grid.getChildren();
             for (int j = 0; j < netos.size(); j++) {
+                int perBox = ((k / 4) % 4) * 16 + ((k % 64) / 16) * 4 + (k / 64) * 64 + (k %4);
                 Label label = (Label) netos.get(j);
-                int value = iaPuzzle[i][j];
+                int value = iaPuzzle[perBox] - 1;
                 label.setText(htToHex.get(value));
+                k++;
             }
         }
     }

@@ -99,7 +99,7 @@ public class MenuController implements Initializable {
                 // Colocar o logo como ícone da aplicação
                 Image iIcon = new Image(getClass().getResourceAsStream("/hexsudoku/images/logo.jpg"));
                 stage.getIcons().add(iIcon);
-
+                fdc.Stage = stage;
                 stage.show();
                 ((Node) (event.getSource())).getScene().getWindow().hide();
                 
